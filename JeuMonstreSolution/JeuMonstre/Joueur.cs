@@ -8,7 +8,6 @@ namespace JeuMonstre
 {
     class Joueur
     {
-        private De de;
         public int PtsDeVies { get; private set; }
         public bool EstVivant
         {
@@ -18,7 +17,6 @@ namespace JeuMonstre
         public Joueur(int points)
         {
             PtsDeVies = points;
-            de = new De();
         }
 
         public void Attaque(MonstreFacile monstre)
@@ -31,7 +29,7 @@ namespace JeuMonstre
 
         public int LanceLeDe()
         {
-            return de.LanceLeDe();
+            return De.LanceLeDe();
         }
 
         public void SubitDegats(int degats)
@@ -42,7 +40,7 @@ namespace JeuMonstre
 
         private bool BouclierFonctionne()
         {
-            return de.LanceLeDe() <= 2;
+            return De.LanceLeDe() <= 2;
         }
     }
 }
