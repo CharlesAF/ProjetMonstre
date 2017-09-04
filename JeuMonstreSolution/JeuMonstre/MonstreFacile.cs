@@ -19,7 +19,7 @@ namespace JeuMonstre
         public void Attaque(Joueur joueur)
         {
             int lanceJoueur = joueur.LanceLeDe();
-            int lanceMonstre = this.lanceLeDe();
+            int lanceMonstre = this.LanceLeDe();
             if (lanceMonstre > lanceJoueur)
             {
                 joueur.SubitDegats(FORCE);
@@ -27,12 +27,12 @@ namespace JeuMonstre
 
         }
 
-        public void subitDegats()
+        public void SubitDegats()
         {
             this.EstVivant = false;
         }
 
-        public int lanceLeDe()
+        public int LanceLeDe()
         {
             return De.LanceLeDe();
         }
